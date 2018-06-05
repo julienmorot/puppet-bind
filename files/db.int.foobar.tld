@@ -1,0 +1,13 @@
+@	IN	SOA	int.foobar.tld. root.int.foobar.tld. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	master.int.foobar.tld.
+@	IN	NS	slave.int.foobar.tld.
+master	IN	A	192.168.100.10
+slave	IN	A	192.168.100.11
+mon	IN	A	192.168.100.12
+puppet	IN	CNAME	master

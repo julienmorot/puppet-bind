@@ -1,0 +1,12 @@
+@	IN	SOA	int.morot.fr. root.int.morot.fr. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	master.int.morot.fr.
+@	IN	NS	slave.int.morot.fr.
+10	IN	PTR	master.int.morot.fr.
+11	IN	PTR	slave.int.morot.fr.
+12	IN	PTR	mon.int.morot.fr.
