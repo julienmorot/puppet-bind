@@ -6,3 +6,13 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+<% if !@zones.empty? -%>
+<% @zones.sort_by {|key, value| key}.each do |key,value| -%>
+zone "<%= key %>" IN {
+<% value.each do |line| -%>
+    <%= line %>;
+<% end -%>
+};
+<% end -%>
+<% end -%>
+

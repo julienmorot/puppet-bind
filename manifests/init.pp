@@ -44,7 +44,6 @@
 #
 class ppbind {
     include ppbind::install
-#    include ppbind::config
     include ppbind::service
 }
 

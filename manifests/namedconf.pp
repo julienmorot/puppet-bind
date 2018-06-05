@@ -10,9 +10,6 @@ define ppbind::namedconf (
   $check_names            = [],
   $extra_options          = {},
   $zones                  = {},
-  $keys                   = {},
-  $includes               = [],
-  $views                  = {},
 ) {
 
   file { '/etc/bind/named.conf':
@@ -21,13 +18,7 @@ define ppbind::namedconf (
     group   => 'bind',
     mode    => '0644',
     content => template("${module_name}/named.conf.erb"),
-  }
-  file { '/etc/bind/named.conf.local':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'bind',
-    mode    => '0644',
-    content => template("${module_name}/named.conf.local.erb"),
+    notify => Service['bind9']
   }
   file { '/etc/bind/named.conf.options':
     ensure  => file,
@@ -35,5 +26,7 @@ define ppbind::namedconf (
     group   => 'bind',
     mode    => '0644',
     content => template("${module_name}/named.conf.options.erb"),
+    notify => Service['bind9']
   }
 }
+
