@@ -1,6 +1,6 @@
 define bind::namedconf (
   $forwarders             = [],
-  $version                = ['none'],
+  $version                = 'none',
   $listen_on              = [ 'any' ],
   $listen_on_v6           = [ 'any' ],
   $allow_query            = [ 'localhost' ],
