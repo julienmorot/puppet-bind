@@ -36,5 +36,6 @@ Example :
 
 ## Limitations
 
-Only the resolver is currently implemented for now.
+Now views, ACL or master/slave.
+Only masters zone but if all your DNS are managed with puppet, it's not a problem :)
 
