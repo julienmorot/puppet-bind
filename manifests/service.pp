@@ -1,4 +1,4 @@
-class ppbind::service inherits ppbind {
+class bind::service inherits bind {
 
   service { 'bind9':
     ensure     => running,

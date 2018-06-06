@@ -1,4 +1,4 @@
-class ppbind::vars {
+class bind::vars {
   $zonedir                = '/var/cache/bind'
   $zonesfile              = '/etc/bind/named.conf.local'
   $zoneowner              = 'bind'

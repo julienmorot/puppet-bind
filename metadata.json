@@ -1,5 +1,5 @@
 {
-  "name": "jmorot-ppbind",
+  "name": "jmorot-bind",
   "version": "0.1.0",
   "author": "Julien Morot",
   "summary": "Manage Bind configuration, Debian-like oriented",

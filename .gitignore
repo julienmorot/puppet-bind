@@ -9,3 +9,5 @@ Gemfile.lock
 /spec/fixtures/modules
 /spec/fixtures/manifests
 /spec/fixtures/vendor
+/files/db.int.morot.fr
+

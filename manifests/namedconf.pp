@@ -1,4 +1,4 @@
-define ppbind::namedconf (
+define bind::namedconf (
   $forwarders             = [],
   $version                = ['none'],
   $listen_on              = [ 'any' ],

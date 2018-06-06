@@ -1,4 +1,4 @@
-# ppbind
+# bind
 
 ## Description
 
@@ -6,7 +6,7 @@ Module to configure Bind, only tested with Debian/Ubuntu.
 
 ## Setup
 
-### Beginning with ppbind
+### Beginning with bind
 
 The very basic steps needed for a user to get the module up and running. This
 can include setup steps, if necessary, or it can be an example of the most
@@ -18,18 +18,18 @@ Just include bind and your configuration in the node definition.
 Example :
 ```
 	node 'master' {
-	  include ppbind
-	  ppbind::namedconf { '/etc/bind/named.conf':
+	  include bind
+	  bind::namedconf { '/etc/bind/named.conf':
 	    forwarders        => [ '8.8.8.8', '8.8.4.4' ],
    	    listen_on    => [ '127.0.0.1', '192.168.100.10' ],
 	    listen_on_v6 => ['::1'],
 	  }
 
 
-      ppbind::zone { 'int.foobar.tld':
+      bind::zone { 'int.foobar.tld':
         zone_name       => 'int.foobar.tld',
         zone_type       => 'master',
-        zone_source     => 'puppet:///modules/ppbind/db.int.foobar.tld',
+        zone_source     => 'puppet:///modules/bind/db.int.foobar.tld',
       }
 	}
 ```
