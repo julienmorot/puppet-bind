@@ -35,15 +35,23 @@
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# Julien Morot>
 #
 # Copyright
 # ---------
 #
-# Copyright 2018 Your name here, unless otherwise noted.
+# Copyright 2018 Julien Morot.
 #
 class bind {
-    include bind::install
-    include bind::service
+  include bind::install
+  include bind::service
+  include '::bind::vars'
+  concat { $::bind::vars::zonesfile:
+    owner   => $::bind::vars::zoneowner,
+    group   => $::bind::vars::zonegroup,
+    mode    => $::bind::vars::zonemode,
+    ensure  => 'present',
+    notify  => Service['bind9'],
+  }
 }
 
