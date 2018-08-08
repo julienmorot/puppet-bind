@@ -36,6 +36,6 @@ Example :
 
 ## Limitations
 
-Now views, ACL or master/slave.
+No views, ACL or master/slave. I'll add these features later.
 Only masters zone but if all your DNS are managed with puppet, it's not a problem :)
 
